@@ -22,14 +22,22 @@ class Rectangulo {
   }
   //ahora hago los metodos
   informar() {
-    return `El alto del rectangulo es de: ${this.alto} cm, el ancho es de: ${this.ancho} cm.</p>`;
+    document.write(
+      `<p>El alto del rectangulo es de: ${this.#alto} cm, el ancho es de: ${
+        this.#ancho
+      } cm.</p>`
+    );
   }
   area() {
-    document.write(`<p>El área del rectángulo es: ${this.#alto * this.#ancho} cm.`);
+    document.write(
+      `<p>El área del rectángulo es: ${this.#alto * this.#ancho} cm.`
+    );
   }
   perimetro() {
     document.write(
-      `<p>El perimetro del rectangulo es: ${(this.#alto + this.#ancho) * 2} cm.</p>`
+      `<p>El perimetro del rectangulo es: ${
+        (this.#alto + this.#ancho) * 2
+      } cm.</p>`
     );
   }
 }
@@ -44,20 +52,26 @@ console.log(rectangulo2);
 console.log(rectangulo3);
 
 //muestro los resultados por pantalla
+
 document.write("<h2>Rectángulo N° 1: </h2>");
-document.write(`<p>Alto: ${rectangulo1.alto}</p>`);
-document.write(`<p>Ancho: ${rectangulo1.ancho}</p>`);
+rectangulo1.informar();
+rectangulo1.area();
+rectangulo1.perimetro();
+//ahora vamos a modificar los datos
+document.write("<h3>Ahora vamos a moficar los datos<h3>");
+rectangulo1.alto = 5;
+rectangulo1.ancho = 7;
+//document.write(`${rectangulo1.area}`)
+rectangulo1.informar();
 rectangulo1.area();
 rectangulo1.perimetro();
 
 document.write("<h2>Rectángulo N° 2: </h2>");
-document.write(`<p>Alto: ${rectangulo2.alto}</p>`);
-document.write(`<p>Ancho: ${rectangulo2.ancho}</p>`);
+rectangulo2.informar();
 rectangulo2.area();
 rectangulo2.perimetro();
 
 document.write("<h2>Rectángulo N° 3: </h2>");
-document.write(`<p>Alto: ${rectangulo3.alto}</p>`);
-document.write(`<p>Ancho: ${rectangulo3.ancho}</p>`);
+rectangulo3.informar();
 rectangulo3.area();
 rectangulo3.perimetro();
