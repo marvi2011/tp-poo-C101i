@@ -1,6 +1,7 @@
 /*1- Crear objetos
 Crea un objeto llamado auto que tenga algunas caracteristicas como el color, marca, modelo y si esta encendido o opagado.
 Crea los metodos necesarios para permitir encender y apagar el auto */
+//primero creo el objeto con notación literal
 const auto = {
   color: "Rojo",
   marca: "VW",
@@ -8,14 +9,21 @@ const auto = {
   estadoOn: "Encendido",
   estadoOff: "Apagado",
 
-  estado1: function () {
-    document.write(`<p>El automovil está ${this.estadoOn}</p>`);
+  //creo los metodos de encendido y apagado con funcion declarativa
+  encenderAuto: function () {
+    document.write(`<p>El auto ahora está: ${this.estadoOn}</p>`);
   },
-
-  estado2: function () {
-    document.write(`<p>El automovil está ${this.estadoOff}</p>`);
+ 
+  detenerAuto: function () {
+    document.write(`<p>El auto ahora está: ${this.estadoOff}</p> `);
   },
 };
-document.write(`<p>Auto: ${auto.estadoOn}</p>`); //llamo a la funcion en pantalla
-document.write(`<p>Auto: ${auto.estadoOff}</p>`); //llamo a la funcion en pantalla
-console.log(auto) //veo el objeto en consola
+//ahora veo en la consola los datos y muestro en pantalla
+console.log(auto);
+document.write("<h2>El auto presenta las siguientes características</h2>");
+document.write(`<p>Marca: ${auto.marca}</p>`);
+document.write(`<p>Modelo: ${auto.modelo}</p>`);
+document.write(`<p>Color: ${auto.color}</p>`);
+
+auto.encenderAuto()
+auto.detenerAuto()
