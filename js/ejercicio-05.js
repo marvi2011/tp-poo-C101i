@@ -3,6 +3,8 @@
 //Los metodos que se debe utilizar son:
 //mostrarGeneracion: generacion a la que pertenece y rasgo caracteristicos
 //tener en cuenta la tabla siguiente.
+//esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la persona es mayor de edad. mostrarDatos: devuelve toda la información del objeto. generaDNI(): genera un número aleatorio de 8 cifras.
+
 class Persona {
   #nombre;
   #edad1;
@@ -41,5 +43,4 @@ class Persona {
   get anioNac() {
     return this.#anioNac;
   }
-  
 }
